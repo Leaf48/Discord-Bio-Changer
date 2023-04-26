@@ -2,6 +2,7 @@ import yaml
 import requests
 from time import sleep
 from datetime import datetime
+import re
 
 class Bio:
     def __init__(self) -> None:
@@ -11,7 +12,11 @@ class Bio:
         self.data = data
         self.token = self.data["token"]
         
-        self.endpoint = "https://discord.com/api/v10/users/@me"
+        if self.data["mode"] == "Bio":
+            self.endpoint = "https://discord.com/api/v10/users/@me"
+        else:
+            self.endpoint = "https://discord.com/api/v10/users/@me/settings"
+            
     
     def change(self, status: str) -> dict:
         dt = datetime.now()
@@ -29,9 +34,12 @@ class Bio:
 
         # Change Status
         else:
-            payload = {"custom_status": {"text": convertedText}}
+            matches = re.findall(":.*?:", convertedText)
+            for i in matches:
+                t = convertedText.replace(i, "")
+            payload = {"custom_status": {"text": t}}
         
-        print(payload)
+        print(convertedText)
 
         res = requests.request("PATCH", self.endpoint, json=payload, headers=headers)
 
@@ -44,7 +52,7 @@ class Bio:
         while True:
             status = c.data["message"][i]
             change = self.change(status)
-            print(status, change)
+            # print(status, change)
 
             sleep(c.data["interval"])
             
@@ -55,6 +63,6 @@ class Bio:
             
 if __name__ == "__main__":
     c = Bio()
-    print(c.data)
+    # print(c.data)
     c.changeInstance()
 
