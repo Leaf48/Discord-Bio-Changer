@@ -15,15 +15,19 @@ class Bio:
     
     def change(self, status: str) -> dict:
         dt = datetime.now()
-        convertToDate = dt.strftime(status) 
-
-        payload = {"bio": convertToDate}
+        convertedText = dt.strftime(status) 
 
         headers = {
             "cookie": "",
             "Content-Type": "application/json",
             "Authorization": self.token
         }
+        
+        if self.data["mode"] == "Status":
+            payload = {"bio": convertedText}
+        else:
+            payload = {"custom_status": {"text": convertedText}}
+            
 
         res = requests.request("PATCH", self.endpoint, json=payload, headers=headers)
 
@@ -37,7 +41,7 @@ class Bio:
             status = c.data["message"][i]
             change = self.change(status)
             print(status, change)
-            
+
             sleep(c.data["interval"])
             
             if i == length:

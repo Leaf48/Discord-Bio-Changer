@@ -1,5 +1,9 @@
+# Your Token
 token: 
+# Interval to change text
 interval: 60
+# Status / Bio
+mode: Bio
 message:
 # Example: "Year: %Y Month: %b Date: %d Hour: %H Minutes: %M Second: %S"
 # Weekday short version %a
