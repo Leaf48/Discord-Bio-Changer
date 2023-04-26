@@ -1,7 +1,21 @@
-token: this is token
+token: 
+interval: 60
 message:
-  - good morning
-  - good evening
-  - good night
-  - what's up
-  - how's it going?
+# Example: "Year: %Y Month: %b Date: %d Hour: %H Minutes: %M Second: %S"
+# Weekday short version %a
+# Weekday full version  %A
+# Weekday as a number   %w
+# Day of month          %d
+# Month Name short ver  %d
+# Month Name full ver   %b
+# Month as a number     %m
+# Year short version    %y
+# Year full version     %Y
+# Hour (00-23)          %H
+# Hour (00-11)          %I
+# AM/PM                 %p
+# Minute                %M
+# Second                %S
+  - ":calendar_spiral: %m月%d日"
+  - ":watch: %H時%M秒"
+  - ":stopwatch: %S秒"
