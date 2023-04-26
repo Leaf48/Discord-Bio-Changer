@@ -23,11 +23,15 @@ class Bio:
             "Authorization": self.token
         }
         
-        if self.data["mode"] == "Status":
+        # Change Bio 
+        if self.data["mode"] == "Bio":
             payload = {"bio": convertedText}
+
+        # Change Status
         else:
             payload = {"custom_status": {"text": convertedText}}
-            
+        
+        print(payload)
 
         res = requests.request("PATCH", self.endpoint, json=payload, headers=headers)
 
