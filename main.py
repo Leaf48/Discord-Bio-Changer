@@ -34,6 +34,7 @@ class Bio:
 
         # Change Status
         else:
+            t = convertedText
             matches = re.findall(":.*?:", convertedText)
             for i in matches:
                 t = convertedText.replace(i, "")
