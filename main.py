@@ -6,7 +6,7 @@ import re
 
 class Bio:
     def __init__(self) -> None:
-        with open("config.yaml") as f:
+        with open("config.yaml", encoding='utf-8', errors='ignore') as f:
             data = yaml.safe_load(f)
 
         self.data = data
