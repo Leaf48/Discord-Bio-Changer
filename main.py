@@ -34,11 +34,11 @@ class Bio:
 
         # Change Status
         else:
-            t = convertedText
-            matches = re.findall(":.*?:", convertedText)
-            for i in matches:
-                t = convertedText.replace(i, "")
-            payload = {"custom_status": {"text": t}}
+            # t = convertedText
+            # matches = re.findall(":.*?:", convertedText)
+            # for i in matches:
+            #     t = convertedText.replace(i, "")
+            payload = {"custom_status": {"text": convertedText}}
         
         print(convertedText)
 
