@@ -5,9 +5,9 @@ interval: 30
 # Status / Bio
 mode: "Status"
 message:
-  - ":calendar_spiral: %m月%d日"
-  - ":watch: %H時%M秒"
-  - ":stopwatch: %S秒"
+  - "⏰ %m:%d"
+  - "⏰ %H時%M秒"
+  - "⏲️ %S秒"
   - "やりますねぇ！"
 # Example: "Year: %Y Month: %b Date: %d Hour: %H Minutes: %M Second: %S"
 # Weekday short version %a
