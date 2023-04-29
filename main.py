@@ -3,12 +3,10 @@ import requests
 from time import sleep
 from datetime import datetime
 import re
-import locale
 import os
+import locale
 
-locale.setlocale(locale.LC_ALL, '')
-
-os.environ["LC_CTYPE"] = "UTF-8"
+locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
 class Bio:
     def __init__(self) -> None:
