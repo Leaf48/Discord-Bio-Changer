@@ -3,6 +3,9 @@ import requests
 from time import sleep
 from datetime import datetime
 import re
+import locale
+
+locale.setlocale(locale.LC_ALL, '')
 
 class Bio:
     def __init__(self) -> None:
@@ -20,7 +23,7 @@ class Bio:
     
     def change(self, status: str) -> dict:
         dt = datetime.now()
-        convertedText = dt.strftime(status) 
+        convertedText = dt.strftime(status)
 
         headers = {
             "cookie": "",
