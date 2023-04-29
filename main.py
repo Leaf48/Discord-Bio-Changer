@@ -27,11 +27,47 @@ class Bio:
             time_str = f"PM"
         else:
             time_str = f"AM"
+        
+        nowWeekFull = dt.weekday()
+        if nowWeekFull == 0:
+            nowWeekFull = "Monday"
+        elif nowWeekFull == 1:
+            nowWeekFull = "Tuesday"
+        elif nowWeekFull == 2:
+            nowWeekFull = "Wednesday"
+        elif nowWeekFull == 3:
+            nowWeekFull = "Thursday"
+        elif nowWeekFull == 4:
+            nowWeekFull = "Friday"
+        elif nowWeekFull == 5:
+            nowWeekFull = "Saturday"
+        elif nowWeekFull == 6:
+            nowWeekFull = "Sunday"
+            
+        nowWeekShort = dt.weekday()
+        if nowWeekShort == 0:
+            nowWeekShort = "Mon"
+        elif nowWeekShort == 1:
+            nowWeekShort = "Tue"
+        elif nowWeekShort == 2:
+            nowWeekShort = "Wed"
+        elif nowWeekShort == 3:
+            nowWeekShort = "Thu"
+        elif nowWeekShort == 4:
+            nowWeekShort = "Fri"
+        elif nowWeekShort == 5:
+            nowWeekShort = "Sat"
+        elif nowWeekShort == 6:
+            nowWeekShort = "Sun"
 
         # month m
         convertedText = status.replace(f"%m", f"{dt.month}")
         # date d
         convertedText = convertedText.replace(f"%d", f"{dt.day}")
+        # week full W
+        convertedText = convertedText.replace(f"%W", f"{nowWeekFull}")
+        # week short w
+        convertedText = convertedText.replace(f"%w", f"{nowWeekShort}")
         # am/pm p
         convertedText = convertedText.replace(f"%p", f"{time_str}")
         # hour H
@@ -40,6 +76,7 @@ class Bio:
         convertedText = convertedText.replace(f"%M", f"{dt.minute}")
         # second S
         convertedText = convertedText.replace(f"%S", f"{dt.second}")
+
         
         headers = {
             "cookie": "",

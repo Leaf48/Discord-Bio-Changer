@@ -5,12 +5,14 @@ interval: 10
 # Status / Bio
 mode: "Status"
 message:
-  - "🧡🤍🧡🤍🧡🤍🧡🤍%H : %M : %S"
+  - "🧡🤍🧡🤍🧡🤍🧡🤍%H : %M : %S : %W : %w"
   - "🤍🧡🤍🧡🤍🧡🤍🧡%m : %d : %p"
 
 # month %m
+# week full %W
+# week short %w
 # date %d
-# am/pm %p
+# AM/PM %p
 # hour %H
 # minute %M
 # second %S
