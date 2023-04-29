@@ -5,24 +5,12 @@ interval: 10
 # Status / Bio
 mode: "Status"
 message:
-  - "🧡🤍🧡🤍🧡🤍🧡🤍"
-  - "🤍🧡🤍🤍🧡🤍🤍🧡"
-  - "⏰ %m:%d"
-  - "⏰ %H時%M秒"
-  - "⏲️ %S秒"
-  - "やりますねぇ！"
-# Example: "Year: %Y Month: %b Date: %d Hour: %H Minutes: %M Second: %S"
-# Weekday short version %a
-# Weekday full version  %A
-# Weekday as a number   %w
-# Day of month          %d
-# Month Name short ver  %d
-# Month Name full ver   %b
-# Month as a number     %m
-# Year short version    %y
-# Year full version     %Y
-# Hour (00-23)          %H
-# Hour (00-11)          %I
-# AM/PM                 %p
-# Minute                %M
-# Second                %S
+  - "🧡🤍🧡🤍🧡🤍🧡🤍%H : %M : %S"
+  - "🤍🧡🤍🧡🤍🧡🤍🧡%m : %d : %p"
+
+# month %m
+# date %d
+# am/pm %p
+# hour %H
+# minute %M
+# second %S
