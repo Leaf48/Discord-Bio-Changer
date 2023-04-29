@@ -1,10 +1,12 @@
 # Your Token
 token: ""
 # Interval to change text
-interval: 30
+interval: 10
 # Status / Bio
 mode: "Status"
 message:
+  - "🧡🤍🧡🤍🧡🤍🧡🤍"
+  - "🤍🧡🤍🤍🧡🤍🤍🧡"
   - "⏰ %m:%d"
   - "⏰ %H時%M秒"
   - "⏲️ %S秒"

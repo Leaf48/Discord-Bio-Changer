@@ -2,9 +2,8 @@ import yaml
 import requests
 from time import sleep
 from datetime import datetime
-import re
-import os
 import locale
+import emoji
 
 locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
@@ -24,7 +23,7 @@ class Bio:
     
     def change(self, status: str) -> dict:
         dt = datetime.now()
-        convertedText = dt.strftime(status)
+        convertedText = dt.strftime(emoji.emojize(status))
 
         headers = {
             "cookie": "",
