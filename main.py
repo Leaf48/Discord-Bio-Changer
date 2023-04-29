@@ -30,22 +30,16 @@ class Bio:
 
         # month m
         convertedText = status.replace(f"%m", f"{dt.month}")
-        print(convertedText)
         # date d
         convertedText = convertedText.replace(f"%d", f"{dt.day}")
-        print(convertedText)
         # am/pm p
         convertedText = convertedText.replace(f"%p", f"{time_str}")
-        print(convertedText)
         # hour H
         convertedText = convertedText.replace(f"%H", f"{dt.hour}")
-        print(convertedText)
         # minute M
         convertedText = convertedText.replace(f"%M", f"{dt.minute}")
-        print(convertedText)
         # second S
         convertedText = convertedText.replace(f"%S", f"{dt.second}")
-        print(convertedText)
         
         headers = {
             "cookie": "",
